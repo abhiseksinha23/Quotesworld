@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container" >
+    <h1>Login</h1>
+    <form method="POST" style="color:green;font-size:20px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login" class="btn btn-default">
+    </form>
+</div>
+{% endblock %}
